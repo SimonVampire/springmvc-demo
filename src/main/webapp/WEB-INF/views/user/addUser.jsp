@@ -26,7 +26,7 @@
     <form:form action="/user/add/process" method="post" commandName="user" role="form">
         <div class="form-group">
             <label for="userName">userName:</label>
-            <input type="text" class="form-control" id="nickname" name="userName" placeholder="Enter userName:"/>
+            <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter userName:"/>
         </div>
         <div class="form-group">
             <label for="password">Password:</label>

@@ -27,8 +27,8 @@
     <%--@elvariable id="user" type="UserloginEntity"--%>
     <form:form action="/user/info/update/process" method="post" commandName="user" role="form">
         <div class="form-group">
-            <label for="firstName">Name:</label>
-            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter Name:"
+            <label for="userName">Name:</label>
+            <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter Name:"
                    value="${user.userName}" readonly/>
         </div>
         <div class="form-group">
@@ -37,7 +37,7 @@
                    value="${user.password}"/>
         </div>
         <!-- 把 id 一并写入 userP 中 -->
-        <input type="hidden" id="id" name="id" value="${user.userId}"/>
+        <input type="hidden" id="userId" name="userId" value="${user.userId}"/>
 
         <div class="form-group">
             <button type="submit" class="btn btn-sm btn-success">提交</button>

@@ -18,6 +18,8 @@ import org.springframework.transaction.annotation.Transactional;
 public interface UserRepository extends JpaRepository<UserloginEntity, Integer>{
     @Modifying // 说明该方法是修改操作
     @Transactional// 说明该方法是事务性操作
-    @Query("UPDATE UserloginEntity  SET password =:password where userId =:id")
-    void updateUser(@Param("password") String password, @Param("id") Integer id);
+    @Query("UPDATE UserloginEntity u SET u.userName =:userName ,u.password =:password where u.userId =:id")
+    void updateUser(@Param("userName") String userName,
+                    @Param("password") String password,
+                    @Param("id") Integer id) throws Exception;
 }

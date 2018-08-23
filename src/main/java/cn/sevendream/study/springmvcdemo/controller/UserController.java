@@ -87,10 +87,14 @@ public class UserController {
     // 更新用户信息 操作
     @RequestMapping(value = "/info/update/process", method = RequestMethod.POST)
     public String updateUserPost(@ModelAttribute("user") UserloginEntity user) {
+        try {
+            // 更新用户信息
+            userRepository.updateUser(user.getUserName(),user.getPassword(), user.getUserId());
+            userRepository.flush(); // 刷新缓冲区
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-        // 更新用户信息
-        userRepository.updateUser(user.getPassword(), user.getUserId());
-        userRepository.flush(); // 刷新缓冲区
         return "redirect:/user/all";
     }
 
