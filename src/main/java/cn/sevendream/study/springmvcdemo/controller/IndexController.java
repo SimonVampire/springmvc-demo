@@ -11,7 +11,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class IndexController {
-
+    /**
+     * todo 
+     * @param 
+     * @return java.lang.String
+     * @author zhangxue9
+     * @date 2020/12/9 18:25
+     */
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index() {
         return "index";
